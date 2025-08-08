@@ -3,24 +3,367 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blackvale Holdings</title>
-    <link rel="icon" type="image/png" href="/assets/BV_Icon.png" />
-    <link rel="stylesheet" href="/src/index.css" />
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        overflow: hidden;
-      }
-    </style>
+    <title>Blackvale Holdings - Investing in Enduring Businesses</title>
+    <meta
+      name="description"
+      content="Blackvale Holdings is a long-term investment firm focused on acquiring and growing exceptional private companies."
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Blackvale Holdings - Investing in Enduring Businesses"
+    />
+    <meta
+      property="og:description"
+      content="A long-term investment firm focused on acquiring and growing exceptional private companies."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blackvaleholdings.com" />
+    <meta property="og:image" content="/assets/BV_Web_Icon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/BV_Web_Icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body
-    class="bg-black min-h-screen min-h-full h-full w-full flex items-center justify-center select-none"
-  >
-    <img src="/assets/BV_Logo.png" alt="" class="logo-hero" />
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="/assets/Email_Logo.png"
+            alt="Blackvale Holdings"
+            class="logo"
+          />
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#philosophy" class="nav-link">Philosophy</a>
+          <a href="#approach" class="nav-link">Approach</a>
+          <a href="#criteria" class="nav-link">Criteria</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#team" class="nav-link">Team</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Investing in Enduring Businesses</h1>
+        <p class="hero-subtitle">
+          Blackvale Holdings is a long-term investment firm focused on acquiring
+          and growing exceptional private companies.
+        </p>
+        <a href="#approach" class="cta-button">Explore Our Strategy</a>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="section philosophy">
+      <div class="container">
+        <h2 class="section-title">We Think in Decades</h2>
+        <div class="philosophy-content">
+          <p class="philosophy-text">
+            At Blackvale, we don't flip companies. We build them. We believe in
+            operational excellence, strategic clarity, and long-term alignment.
+            Our focus is on creating sustainable value through patient capital,
+            world-class teams, and intelligent reinvestment.
+          </p>
+          <blockquote class="philosophy-quote">
+            "The best businesses are built, not bought."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Approach Section -->
+    <section id="approach" class="section approach">
+      <div class="container">
+        <h2 class="section-title">Focused. Flexible. Founder-Friendly.</h2>
+        <div class="approach-grid">
+          <div class="approach-card">
+            <div class="approach-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12,6 12,12 16,14"></polyline>
+              </svg>
+            </div>
+            <h3 class="approach-card-title">Long-Term Vision</h3>
+            <p class="approach-card-text">
+              We hold businesses with no forced exit timelines.
+            </p>
+          </div>
+          <div class="approach-card">
+            <div class="approach-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="approach-card-title">Strategic Partnership</h3>
+            <p class="approach-card-text">
+              We work alongside founders and management to amplify what already
+              works.
+            </p>
+          </div>
+          <div class="approach-card">
+            <div class="approach-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+              </svg>
+            </div>
+            <h3 class="approach-card-title">Platform Building</h3>
+            <p class="approach-card-text">
+              We pursue sector leadership through disciplined acquisitions and
+              organic growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Look For Section -->
+    <section id="criteria" class="section criteria">
+      <div class="container">
+        <h2 class="section-title">Our Ideal Acquisition</h2>
+        <div class="criteria-grid">
+          <div class="criteria-card">
+            <div class="criteria-bullet"></div>
+            <h3 class="criteria-title">$1M–$10M EBITDA</h3>
+            <p class="criteria-text">
+              Established profitability with room for operational improvements
+              and growth.
+            </p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-bullet"></div>
+            <h3 class="criteria-title">Strong Recurring Revenue</h3>
+            <p class="criteria-text">
+              Predictable cash flows with high customer retention and
+              subscription models.
+            </p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-bullet"></div>
+            <h3 class="criteria-title">Mission-Critical Product</h3>
+            <p class="criteria-text">
+              Essential services or products that customers cannot easily
+              replace.
+            </p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-bullet"></div>
+            <h3 class="criteria-title">Low Customer Churn</h3>
+            <p class="criteria-text">
+              Stable customer base with high satisfaction and long-term
+              relationships.
+            </p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-bullet"></div>
+            <h3 class="criteria-title">Owner Looking to Partner</h3>
+            <p class="criteria-text">
+              Founders seeking retirement or strategic partnership for next
+              phase growth.
+            </p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-bullet"></div>
+            <h3 class="criteria-title">Industry Tailwinds</h3>
+            <p class="criteria-text">
+              Fragmented markets with consolidation opportunities and strong
+              growth trends.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h2 class="section-title">Select Investments</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="portfolio-placeholder">
+              <span>Investment Coming Soon</span>
+            </div>
+            <h3 class="portfolio-title">Sector Leadership</h3>
+            <p class="portfolio-text">
+              Building market-leading platforms through strategic acquisitions
+              and operational excellence.
+            </p>
+          </div>
+          <div class="portfolio-card">
+            <div class="portfolio-placeholder">
+              <span>Investment Coming Soon</span>
+            </div>
+            <h3 class="portfolio-title">Operational Excellence</h3>
+            <p class="portfolio-text">
+              Partnering with exceptional management teams to unlock sustainable
+              value creation.
+            </p>
+          </div>
+          <div class="portfolio-card">
+            <div class="portfolio-placeholder">
+              <span>Investment Coming Soon</span>
+            </div>
+            <h3 class="portfolio-title">Long-Term Growth</h3>
+            <p class="portfolio-text">
+              Investing in businesses with enduring competitive advantages and
+              growth potential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+      <div class="container">
+        <h2 class="section-title">Built for the Long Game</h2>
+        <div class="team-content">
+          <p class="team-text">
+            Blackvale was founded on the belief that private ownership, patient
+            capital, and operational excellence can unlock extraordinary
+            long-term value. Our mission is to identify overlooked businesses,
+            support exceptional operators, and systematically build enduring
+            companies that compound in value over time. We’re not chasing
+            trends. We’re here to build great businesses — quietly,
+            methodically, and at scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Let's Build Something Great</h2>
+        <p class="contact-subtitle">
+          Whether you're a founder, broker, or investor — we'd love to hear from
+          you.
+        </p>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="reason" class="form-label">Reason for Contact</label>
+            <select id="reason" name="reason" class="form-input" required>
+              <option value="">Select a reason</option>
+              <option value="acquisition">Business Acquisition</option>
+              <option value="partnership">Strategic Partnership</option>
+              <option value="investment">Investment Opportunity</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-input"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img
+              src="/assets/Email_logo.png"
+              alt="Blackvale Holdings"
+              class="footer-logo"
+            />
+            <p class="footer-copyright">
+              © Blackvale Holdings. All rights reserved.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">Navigation</h3>
+            <div class="footer-links">
+              <a href="#home" class="footer-link">Home</a>
+              <a href="#philosophy" class="footer-link">About</a>
+              <a href="#approach" class="footer-link">Strategy</a>
+              <a href="#contact" class="footer-link">Contact</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">Contact</h3>
+            <a href="mailto:deals@blackvaleholdings.com" class="footer-email"
+              >deals@blackvaleholdings.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="/script.js"></script>
   </body>
 </html>

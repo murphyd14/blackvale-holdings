@@ -5,10 +5,17 @@ import { leadershipPlaceholders } from "@/lib/blackvaleSiteConfig";
 import Section from "./Section";
 import { motion, AnimatePresence } from "framer-motion";
 
+interface Leader {
+  name: string;
+  title: string;
+  bio: string;
+  expandedBio?: string;
+}
+
 export default function LeadershipSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const leaders = [
+  const leaders: Leader[] = [
     {
       name: "Leadership Team",
       title: "Experienced Operators & Investors",
@@ -61,7 +68,7 @@ export default function LeadershipSection() {
                 {leader.bio}
               </p>
               <AnimatePresence>
-                {expandedIndex === index && "expandedBio" in leader && (
+                {expandedIndex === index && leader.expandedBio && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}

@@ -64,6 +64,9 @@ export default function RootLayout({
 
           // Identity preview chip
           identityPreview: "bg-zinc-50 border border-zinc-200 rounded-none",
+          
+          // Hide development mode banner
+          developmentModeBanner: "hidden",
         },
       }}
     >

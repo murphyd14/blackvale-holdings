@@ -111,12 +111,11 @@ export default function Nav({ variant = "default" }: NavProps) {
               <SignInButton mode="modal">
                 <button
                   type="button"
-                  className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-colors text-[10px] md:text-xs lg:text-sm font-medium whitespace-nowrap ${
+                  className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-colors text-[10px] md:text-xs lg:text-sm font-medium whitespace-nowrap flex items-center justify-center ${
                     isDashboard
                       ? "border border-black bg-black text-white hover:bg-zinc-900 h-8 md:h-9"
                       : "border border-white/10 text-gray-300 hover:border-white/20 hover:bg-white/5"
                   }`}
-                  style={{ display: 'block' }}
                 >
                   Client Login
                 </button>

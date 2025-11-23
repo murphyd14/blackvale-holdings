@@ -73,15 +73,15 @@ pnpm dev
 The project uses `.env.local` for local development (this file is git-ignored). It should contain:
 
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_live_...
+CLERK_SECRET_KEY=sk_live_...
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 ```
 
-**Important**: Use Clerk **test keys** (`pk_test_...` / `sk_test_...`) for local development.
+**Note**: The `.env.local` file uses live keys for local development. This file is git-ignored and will not be committed. Contact the project maintainer for the actual keys.
 
 ### Production (Vercel)
 
@@ -94,6 +94,8 @@ For production deployment on Vercel:
    - `NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up`
    - `NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard`
    - `NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard`
+
+**Important**: Get the actual live keys from the Clerk Dashboard. Do not commit keys to the repository.
 
 2. Configure your production domain in the Clerk dashboard.
 

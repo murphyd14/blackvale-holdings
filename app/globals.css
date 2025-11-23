@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide Clerk Development Mode banner */
+[data-clerk-element="developmentModeBanner"],
+.cl-development-mode-banner,
+div[class*="development-mode"],
+div[class*="DevelopmentMode"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

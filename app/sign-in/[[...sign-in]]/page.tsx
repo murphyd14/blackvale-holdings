@@ -37,6 +37,8 @@ export default function SignInPage() {
             footerActionLink:
               "text-zinc-600 underline underline-offset-4 hover:text-black",
             identityPreview: "bg-zinc-50 border border-zinc-200 rounded-none",
+            // Hide development mode banner
+            developmentModeBanner: "hidden",
           },
         }}
       />

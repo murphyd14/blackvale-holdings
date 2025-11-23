@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
@@ -6,10 +6,11 @@ export const metadata: Metadata = {
   title: "Blackvale Holdings | Holding Company for a New Era",
   description:
     "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

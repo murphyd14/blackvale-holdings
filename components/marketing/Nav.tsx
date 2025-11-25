@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useActiveSection } from "@/hooks/useActiveSection";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { useAuth, SignInButton, UserButton } from "@clerk/nextjs";
 
 interface NavProps {
   variant?: "default" | "dashboard";
@@ -15,6 +15,7 @@ export default function Nav({ variant = "default" }: NavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const activeSection = useActiveSection();
   const isDashboard = variant === "dashboard";
+  const { isSignedIn, isLoaded } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,8 +108,8 @@ export default function Nav({ variant = "default" }: NavProps) {
 
           {/* Client Login */}
           <div className="flex items-center gap-4">
-            <SignedOut>
-              <SignInButton mode="modal">
+            {isLoaded && !isSignedIn && (
+              <SignInButton mode="modal" fallbackRedirectUrl="/dashboard">
                 <button
                   type="button"
                   className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-colors text-[10px] md:text-xs lg:text-sm font-medium whitespace-nowrap ${
@@ -120,8 +121,8 @@ export default function Nav({ variant = "default" }: NavProps) {
                   Client Login
                 </button>
               </SignInButton>
-            </SignedOut>
-            <SignedIn>
+            )}
+            {isLoaded && isSignedIn && (
               <UserButton
                 appearance={{
                   elements: {
@@ -138,7 +139,7 @@ export default function Nav({ variant = "default" }: NavProps) {
                   },
                 }}
               />
-            </SignedIn>
+            )}
 
             {/* Mobile Menu Button - only show on non-dashboard pages */}
             {!isDashboard && (
@@ -191,8 +192,8 @@ export default function Nav({ variant = "default" }: NavProps) {
                   </a>
                 );
               })}
-              <SignedOut>
-                <SignInButton mode="modal">
+              {isLoaded && !isSignedIn && (
+                <SignInButton mode="modal" fallbackRedirectUrl="/dashboard">
                   <button
                     type="button"
                     onClick={() => setMobileMenuOpen(false)}
@@ -201,8 +202,8 @@ export default function Nav({ variant = "default" }: NavProps) {
                     Client Login
                   </button>
                 </SignInButton>
-              </SignedOut>
-              <SignedIn>
+              )}
+              {isLoaded && isSignedIn && (
                 <div className="mt-4 flex justify-center">
                   <UserButton
                     appearance={{
@@ -217,7 +218,7 @@ export default function Nav({ variant = "default" }: NavProps) {
                     }}
                   />
                 </div>
-              </SignedIn>
+              )}
             </div>
           </div>
         )}

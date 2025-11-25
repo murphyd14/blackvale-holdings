@@ -23,6 +23,9 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
+        layout: {
+          unsafe_disableDevelopmentModeWarnings: true,
+        },
         variables: {
           // Monochrome theme
           colorBackground: "#ffffff",
@@ -64,14 +67,11 @@ export default function RootLayout({
 
           // Identity preview chip
           identityPreview: "bg-zinc-50 border border-zinc-200 rounded-none",
-          
-          // Hide development mode banner
-          developmentModeBanner: "hidden",
         },
       }}
     >
       <html lang="en">
-        <body className="font-sans bg-white text-black antialiased min-h-screen overflow-x-hidden">
+        <body>
           {children}
         </body>
       </html>

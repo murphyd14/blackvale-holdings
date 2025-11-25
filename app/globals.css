@@ -6,11 +6,17 @@
 [data-clerk-element="developmentModeBanner"],
 .cl-development-mode-banner,
 div[class*="development-mode"],
-div[class*="DevelopmentMode"] {
+div[class*="DevelopmentMode"],
+[class*="cl-developmentModeBanner"],
+[class*="cl-development-mode-banner"],
+.cl-banner,
+[data-testid="development-mode-banner"] {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
   overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 @layer base {

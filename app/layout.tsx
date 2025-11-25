@@ -8,6 +8,72 @@ export const metadata: Metadata = {
   title: "Blackvale Holdings | Holding Company for a New Era",
   description:
     "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
+  keywords: [
+    "Blackvale Holdings",
+    "holding company",
+    "private equity",
+    "long-term investment",
+    "business acquisition",
+    "portfolio companies",
+    "value creation",
+    "industrial services",
+    "B2B software",
+    "enduring businesses",
+  ],
+  authors: [{ name: "Blackvale Holdings" }],
+  creator: "Blackvale Holdings",
+  publisher: "Blackvale Holdings",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
+  ),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com",
+    siteName: "Blackvale Holdings",
+    title: "Blackvale Holdings | Holding Company for a New Era",
+    description:
+      "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
+    images: [
+      {
+        url: `${
+          process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
+        }/assets/Blackvale_Black.png`,
+        width: 1200,
+        height: 630,
+        alt: "Blackvale Holdings Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blackvale Holdings | Holding Company for a New Era",
+    description:
+      "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
+    images: [
+      `${
+        process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
+      }/assets/Blackvale_Black.png`,
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add Google Search Console verification code here when available
+    // google: "your-google-verification-code",
+  },
 };
 
 export const viewport: Viewport = {
@@ -71,9 +137,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body>
-          {children}
-        </body>
+        <body>{children}</body>
       </html>
     </ClerkProvider>
   );

@@ -14,7 +14,7 @@ A modern, minimal marketing homepage for Blackvale Holdings, built with Next.js 
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
@@ -79,6 +79,7 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+NEXT_PUBLIC_SITE_URL=https://blackvaleholdings.com
 ```
 
 **Note**: The `.env.local` file uses live keys for local development. This file is git-ignored and will not be committed. Contact the project maintainer for the actual keys.
@@ -94,6 +95,7 @@ For production deployment on Vercel:
    - `NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up`
    - `NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard`
    - `NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard`
+   - `NEXT_PUBLIC_SITE_URL` → Your production domain (e.g., `https://blackvaleholdings.com`)
 
 **Important**: Get the actual live keys from the Clerk Dashboard. Do not commit keys to the repository.
 
@@ -110,6 +112,24 @@ npm run build
 npm start
 ```
 
+## SEO & Metadata
+
+The site includes comprehensive SEO metadata for Google search results:
+
+- **Open Graph tags** for social media sharing (Facebook, LinkedIn, etc.)
+- **Twitter Card** metadata for Twitter sharing
+- **Structured Data (JSON-LD)** for Google's knowledge graph
+- **Meta keywords, description, and canonical URLs**
+- **Robots directives** for search engine crawling
+
+When someone searches "Blackvale Holdings" on Google, the site will display:
+
+- Company name and description
+- Logo image (from `/assets/Blackvale_Icon.png`)
+- Rich snippet information
+
+**Note**: For optimal results, ensure `NEXT_PUBLIC_SITE_URL` is set to your production domain in both local `.env.local` and Vercel environment variables.
+
 ## Tech Stack
 
 - **Next.js 14** - React framework with App Router
@@ -121,4 +141,3 @@ npm start
 ## License
 
 © 2024 Blackvale Holdings
-

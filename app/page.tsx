@@ -21,9 +21,7 @@ export default function Home() {
     description:
       "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com",
-    logo: `${
-      process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
-    }/assets/Blackvale_Black.png`,
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"}/assets/Blackvale_No_Background.png`,
     sameAs: [
       // Add social media URLs here when available
       // "https://linkedin.com/company/blackvale-holdings",

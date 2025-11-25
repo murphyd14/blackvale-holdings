@@ -5,14 +5,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com";
 
   // Public routes that should be indexed
-  const routes = [
+  return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 1.0,
     },
   ];
-
-  return routes;
 }

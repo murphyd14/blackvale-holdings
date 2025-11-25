@@ -1,6 +1,14 @@
 import { currentUser } from "@clerk/nextjs/server";
+import { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/marketing/Nav";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function DashboardPage() {
   const user = await currentUser();

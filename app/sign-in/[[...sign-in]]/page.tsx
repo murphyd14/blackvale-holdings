@@ -1,6 +1,11 @@
 "use client";
 
 import { SignIn } from "@clerk/nextjs";
+import { Metadata } from "next";
+
+// Note: Metadata export doesn't work in client components
+// We'll handle this via layout or use a different approach
+// For now, we'll add it to a parent layout if needed
 
 export default function SignInPage() {
   return (

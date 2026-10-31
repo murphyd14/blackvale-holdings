@@ -53,63 +53,9 @@ export default async function DashboardPage() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
             Welcome back, {displayName}.
           </h1>
-          <p className="max-w-2xl text-sm md:text-base text-zinc-600">
-            We&apos;re currently building out your Blackvale dashboard. Soon,
-            you&apos;ll see a clear overview of your{" "}
-            <span className="font-medium">assets under management (AUM)</span>{" "}
-            and portfolio performance here.
-          </p>
-        </div>
-
-        {/* Metric cards */}
-        <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-6 md:grid-cols-3">
-          <div className="flex flex-col justify-between border border-zinc-200 bg-zinc-50 p-4 sm:p-5 text-sm">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                Total AUM
-              </p>
-              <p className="mt-4 text-2xl font-semibold text-zinc-900">$2M+</p>
-            </div>
-            <p className="mt-4 text-xs text-zinc-500">
-              Your aggregated assets under management.
-            </p>
-          </div>
-
-          <div className="flex flex-col justify-between border border-zinc-200 bg-zinc-50 p-4 sm:p-5 text-sm">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                Portfolio Companies
-              </p>
-              <p className="mt-4 text-2xl font-semibold text-zinc-900">2</p>
-            </div>
-            <p className="mt-4 text-xs text-zinc-500">
-              Number of companies in the portfolio.
-            </p>
-          </div>
-
-          <div className="flex flex-col justify-between border border-zinc-200 bg-zinc-50 p-4 sm:p-5 text-sm">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                Performance
-              </p>
-              <p className="mt-4 text-2xl font-semibold text-zinc-900">—%</p>
-            </div>
-            <p className="mt-4 text-xs text-zinc-500">
-              Portfolio performance metrics will be displayed here as data
-              becomes available.
-            </p>
-          </div>
-        </div>
-
-        {/* Coming soon strip */}
-        <div className="mt-8 sm:mt-10 border border-dashed border-zinc-200 bg-zinc-50 px-4 py-4 text-xs text-zinc-500 md:flex md:items-center md:justify-between gap-3">
-          <p className="leading-relaxed">
-            The Blackvale dashboard is in active development. Soon, this page
-            will become your daily view into portfolio performance, risk, and
-            allocation.
-          </p>
-          <p className="mt-2 md:mt-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-400 whitespace-nowrap">
-            Coming soon
+          <p className="max-w-2xl text-base text-zinc-600">
+            This portal is under development. No investment accounts, holdings,
+            or financial performance data are currently available here.
           </p>
         </div>
       </section>

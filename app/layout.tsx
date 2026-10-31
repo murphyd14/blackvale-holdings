@@ -1,63 +1,58 @@
 import type { Metadata, Viewport } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
+import localFont from "next/font/local";
+import { site } from "@/lib/blackvaleSiteConfig";
+const geist = localFont({
+  src: "../public/fonts/geist.ttf",
+  variable: "--font-geist",
+  display: "swap",
+});
+const instrument = localFont({
+  src: [
+    {
+      path: "../public/fonts/instrument-serif.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/instrument-serif-italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-instrument",
+  display: "swap",
+});
 
 // Layout configuration - ClerkProvider wraps the entire app
 
 export const metadata: Metadata = {
-  title: "Blackvale Holdings | Holding Company for a New Era",
-  description:
-    "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
-  keywords: [
-    "Blackvale Holdings",
-    "holding company",
-    "private equity",
-    "long-term investment",
-    "business acquisition",
-    "portfolio companies",
-    "value creation",
-    "industrial services",
-    "B2B software",
-    "enduring businesses",
-  ],
-  authors: [{ name: "Blackvale Holdings" }],
-  creator: "Blackvale Holdings",
-  publisher: "Blackvale Holdings",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
-  ),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL(site.url),
+  title: "Blackvale Holdings | Built to Endure",
+  description: site.description,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com",
+    url: site.url,
     siteName: "Blackvale Holdings",
-    title: "Blackvale Holdings | Holding Company for a New Era",
-    description:
-      "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
+    title: "Blackvale Holdings | Built to Endure",
+    description: site.description,
     images: [
       {
-        url: `${
-          process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
-        }/assets/Blackvale_Black.png`,
+        url: "/assets/blackvale-social.png",
         width: 1200,
-        height: 630,
-        alt: "Blackvale Holdings Logo",
+        height: 379,
+        alt: "Blackvale Holdings",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blackvale Holdings | Holding Company for a New Era",
-    description:
-      "A tech-driven holding company building an ecosystem of businesses that reinforce each other through strategic expansion, shared capabilities, and long-term value creation.",
-    images: [
-      `${
-        process.env.NEXT_PUBLIC_SITE_URL || "https://blackvaleholdings.com"
-      }/assets/Blackvale_Black.png`,
-    ],
+    title: "Blackvale Holdings | Built to Endure",
+    description: site.description,
+    images: ["/assets/blackvale-social.png"],
   },
   robots: {
     index: true,
@@ -69,10 +64,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    // Add Google Search Console verification code here when available
-    // google: "your-google-verification-code",
   },
 };
 
@@ -137,7 +128,9 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body>{children}</body>
+        <body className={`${geist.variable} ${instrument.variable}`}>
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
